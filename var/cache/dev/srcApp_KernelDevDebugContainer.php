@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerDGePXuz\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'DGePXuz',
-    'container.build_id' => '95668d6c',
-    'container.build_time' => 1575392586,
+    'container.build_id' => 'bb80e9d1',
+    'container.build_time' => 1575472253,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerDGePXuz');
