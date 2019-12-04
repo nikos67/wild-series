@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerVxyJ4bV/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerDGePXuz/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'App\Kernel';
@@ -34,6 +34,10 @@ $classes[] = 'Symfony\Component\Cache\Adapter\AbstractAdapter';
 $classes[] = 'Symfony\Component\Cache\Marshaller\DefaultMarshaller';
 $classes[] = 'Symfony\Component\HttpKernel\EventListener\SessionListener';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
+$classes[] = 'Symfony\Component\Asset\Packages';
+$classes[] = 'Symfony\Component\Asset\PathPackage';
+$classes[] = 'Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy';
+$classes[] = 'Symfony\Component\Asset\Context\RequestStackContext';
 $classes[] = 'Symfony\Component\Mailer\EventListener\MessageLoggerListener';
 $classes[] = 'Symfony\Component\Validator\Validation';
 $classes[] = 'Symfony\Component\Validator\ContainerConstraintValidatorFactory';
@@ -94,10 +98,6 @@ $classes[] = 'Symfony\Bridge\Twig\Extension\SecurityExtension';
 $classes[] = 'Symfony\Bridge\Twig\Extension\ProfilerExtension';
 $classes[] = 'Symfony\Bridge\Twig\Extension\TranslationExtension';
 $classes[] = 'Symfony\Bridge\Twig\Extension\AssetExtension';
-$classes[] = 'Symfony\Component\Asset\Packages';
-$classes[] = 'Symfony\Component\Asset\PathPackage';
-$classes[] = 'Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy';
-$classes[] = 'Symfony\Component\Asset\Context\RequestStackContext';
 $classes[] = 'Symfony\Bridge\Twig\Extension\CodeExtension';
 $classes[] = 'Symfony\Bridge\Twig\Extension\RoutingExtension';
 $classes[] = 'Symfony\Bridge\Twig\Extension\YamlExtension';
@@ -112,6 +112,7 @@ $classes[] = 'Symfony\Bridge\Twig\Extension\DumpExtension';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension';
 $classes[] = 'Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension';
 $classes[] = 'Symfony\Component\VarDumper\Dumper\HtmlDumper';
+$classes[] = 'Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension';
 $classes[] = 'Symfony\Bridge\Twig\AppVariable';
 $classes[] = 'Twig\RuntimeLoader\ContainerRuntimeLoader';
 $classes[] = 'Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor';
