@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category }}{% endblock %}
+
+{% block body %}
+    <h1>{{ category }}</h1>
+    {% for program in programs %}
+
+
+        <div>
+            <h2>{{ program.title }} - Category : {{ category }}</h2>
+            <p>{{ program.summary }}</p>
+        </div>
+    {% endfor %}
+
+    <a href="{{ path('wild_index') }}">
+        Retour a l'accueil
+    </a>
+    <br>
+
+{% endblock %}
