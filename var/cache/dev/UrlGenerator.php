@@ -16,7 +16,11 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'app_index' => [[], ['_controller' => 'App\\Controller\\DefaultController::index'], [], [['text', '/']], [], []],
-    'wild_index' => [[], ['_controller' => 'App\\Controller\\WildController::index'], [], [['text', '/wild']], [], []],
-    'wild_show' => [['slug'], ['slug' => ' ', '_controller' => 'App\\Controller\\WildController::show'], ['slug' => '[a-z0-9-]+'], [['variable', '/', '[a-z0-9-]+', 'slug'], ['text', '/wild/show']], [], []],
+    'wild_index' => [[], ['_controller' => 'App\\Controller\\WildController::index'], [], [['text', '/wild/']], [], []],
+    'wild_show' => [['slug'], ['slug' => null, '_controller' => 'App\\Controller\\WildController::show'], ['slug' => '[a-z0-9-]+'], [['variable', '/', '[a-z0-9-]+', 'slug'], ['text', '/wild/show']], [], []],
+    'wild_show_category' => [['categoryName'], ['_controller' => 'App\\Controller\\WildController::showByCategory'], [], [['variable', '/', '[^/]++', 'categoryName'], ['text', '/wild/category']], [], []],
+    'wild_show_program' => [['slug'], ['_controller' => 'App\\Controller\\WildController::showByProgram'], [], [['variable', '/', '[^/]++', 'slug'], ['text', '/wild/program']], [], []],
+    'wild_show_season' => [['id'], ['_controller' => 'App\\Controller\\WildController::showBySeason'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/wild/season']], [], []],
+    'wild_show_episode' => [['id'], ['_controller' => 'App\\Controller\\WildController::showEpisode'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/wild/episode']], [], []],
     'wild_show_index' => [[], ['_controller' => 'App\\Controller\\WildController::index'], [], [['text', '/wild/']], [], []],
 ];
