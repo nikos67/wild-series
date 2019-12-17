@@ -58,15 +58,14 @@ class WildController extends AbstractController
             '/-/',
             ' ', ucwords(trim(strip_tags($slug)), "-")
         );
-        $program = $this->getDoctrine()
+        $program = $this
+            ->getDoctrine()
             ->getRepository(Program::class)
             ->findOneBy(['title' => mb_strtolower($slug)]);
         if (!$program) {
-            throw $this->createNotFoundException(
-                'No program with '.$slug.' title, found in program\'s table.'
-            );
+            throw $this
+                ->createNotFoundException('No program with '.$slug.' title, found in program\'s table.');
         }
-
         return $this->render('wild/show.html.twig', [
             'program' => $program,
             'slug'  => $slug,
