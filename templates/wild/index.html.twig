@@ -9,6 +9,7 @@
         <div>
             <h2>{{ loop.index }} / {{ program.title }} - Catégorie : {{ program.category.name }}</h2>
             <p>{{ program.summary }}</p>
+            <img class="align-self-start mt-2" src="{{ program.poster }}">
             <a href="{{ path('wild_show_program',{'slug':program.slug}) }}">Saison de {{ program.title }}</a>
         </div>
     {% else %}
