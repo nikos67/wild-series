@@ -30,6 +30,7 @@ class WildController extends AbstractController
             ->getRepository(Program::class)
             ->findAll();
 
+
         if (!$programs) {
             throw $this->createNotFoundException(
                 'No program found in program\'s table.'
@@ -40,6 +41,7 @@ class WildController extends AbstractController
             'wild/index.html.twig',
             ['programs' => $programs]
         );
+
     }
     /**
      * Getting a program with a formatted slug for title

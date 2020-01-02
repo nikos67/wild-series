@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+    <h1>Toutes les catégories : </h1>
+
+    {% for category in categories %}
+        <div>
+            <h2>{{ loop.index }} / {{ category.name }} </h2>
+        </div>
+    {% else %}
+        Aucune caégorie trouvée.
+    {% endfor %}
+    <a href="{{ path('app_index') }}">
+        <u><strong>Retour à l'accueil</strong></u>
+    </a>
+
+{#<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/Users/nicolas/Localhost/Wild-series/src/Controller/CategoryController.php'|file_link(0) }}">src/Controller/CategoryController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/Users/nicolas/Localhost/Wild-series/templates/category/index.html.twig'|file_link(0) }}">templates/category/index.html.twig</a></code></li>
+    </ul>
+</div>#}
+{% endblock %}
