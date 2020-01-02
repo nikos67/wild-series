@@ -6,7 +6,6 @@
 /public/bundles/
 /vendor/
 .idea
-/var/
 
 ###< symfony/framework-bundle ###
 
@@ -22,3 +21,4 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+/var/

@@ -2865,16 +2865,16 @@
         },
         {
             "name": "symfony/form",
-            "version": "v4.4.0",
+            "version": "v4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "d381d4fadee5f84ee730448ce6459604babd57ef"
+                "reference": "7ed4441a347fe33299908a9aa24ff8a556848a16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/d381d4fadee5f84ee730448ce6459604babd57ef",
-                "reference": "d381d4fadee5f84ee730448ce6459604babd57ef",
+                "url": "https://api.github.com/repos/symfony/form/zipball/7ed4441a347fe33299908a9aa24ff8a556848a16",
+                "reference": "7ed4441a347fe33299908a9aa24ff8a556848a16",
                 "shasum": ""
             },
             "require": {
@@ -2945,7 +2945,7 @@
             ],
             "description": "Symfony Form Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-20T12:58:23+00:00"
+            "time": "2019-12-16T11:07:37+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -5915,6 +5915,7 @@
                 "code",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-code",
             "time": "2019-10-05T23:18:22+00:00"
         },
         {
@@ -5969,6 +5970,7 @@
                 "events",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
         }
     ],
