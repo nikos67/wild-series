@@ -49,9 +49,21 @@ class Program
      */
     private $slug;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Actor", mappedBy="programs")
+     */
+    private $actors;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Actor", inversedBy="program")
+     */
+    private $actor;
+
     public function __construct()
     {
         $this->seasons = new ArrayCollection();
+        $this->actors = new ArrayCollection();
+        $this->actor = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -148,5 +160,41 @@ class Program
         $this->slug = $slug;
 
         return $this;
+    }
+
+    /**
+     * @return Collection|Actor[]
+     */
+    public function getActors(): Collection
+    {
+        return $this->actors;
+    }
+
+    public function addActor(Actor $actor): self
+    {
+        if (!$this->actors->contains($actor)) {
+            $this->actors[] = $actor;
+            $actor->addProgram($this);
+        }
+
+        return $this;
+    }
+
+    public function removeActor(Actor $actor): self
+    {
+        if ($this->actors->contains($actor)) {
+            $this->actors->removeElement($actor);
+            $actor->removeProgram($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Actor[]
+     */
+    public function getActor(): Collection
+    {
+        return $this->actor;
     }
 }
